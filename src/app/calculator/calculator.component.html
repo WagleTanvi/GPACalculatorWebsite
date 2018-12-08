@@ -1,0 +1,94 @@
+<div id="everything">
+</div>
+<div id="main" class="p-5">
+    
+        <!-- head -->
+        <h1 style="text-align: center; font-size: 80px;" class="font-big"> Calculate your GPA </h1>
+        <p style="text-align: center; font-size: 20px;" class="body-font"> Specifically made for South Brunswick High School students, this free online tool makes it very easy to calculate your gpa. Use this tool to track your grades without waiting for genesis!</p>
+        
+        <!-- body -->
+        <div class="row">
+            <div class = "col-7 p-2 shadow " style ="border:1px solid #FFB88E; background: #FFB88E">
+                    <div class="row justify-content-center py-2" > 
+                        <h2 class="textFont" style="font-weight: bold;"> My Classes</h2> 
+                    </div>
+                    <div class="row justify-content-center py-2">
+                            <div class="switch-field">
+                                <div class="switch-title" style="text-align: center;">Grade Format</div>
+                                <input [(ngModel)]="gradeType" (ngModelChange)="changeType(gradeType)" type="radio" id="switch_left" name="switch_1" value="number">
+                                <label for="switch_left">Number</label>
+                                <input [(ngModel)]="gradeType" (ngModelChange)="changeType(gradeType)"  type="radio" id="switch_right" name="switch_1" value="letter" />
+                                <label for="switch_right">Letter</label>
+                            </div>
+                    </div>
+                 
+                    <form class="pt-2 pb-4">
+                        <div class="form-row justify-content-center" *ngFor="let class of classes; let i = index">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-2">
+                                  <label for="weight">Weighting:</label>
+                                  <select [(ngModel)]="class.weight" name="Weight-{{i}}" class="form-control" id="weight">
+                                          <option selected="selected" value="" disabled="" class=""> Choose</option>
+                                          <option>Academic</option>
+                                          <option>Honors</option>
+                                          <option>AP</option>
+                                  </select>
+                            </div>
+                            <div class="col-5">
+                                <label for="name">Class Name:</label>
+                                <input [(ngModel)]="class.name" name="ClassName-{{i}}" id="name"type="text" class="form-control" placeholder="English">
+                            </div>
+                            <div class="col-2">
+                                <label for="name">Grade:</label>
+                                <input [(ngModel)]="class.grade" name="Grade-{{i}}" type="text" class="form-control" placeholder="97">
+                            </div>
+                            <div class="col-md-1 pt-4 mt-2">
+                                  <button class="btn btn-background text-white btn-default"  type="button" (click)="deleteValue(i)">Delete</button>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row justify-content-center pt-5">
+                            <button (click)="addClass()" class="btn btn-background text-white textFont" style="font-size: 20px;"> Add Class</button>
+                        </div>
+                    </form>
+                  
+                      <div class="pt-5">
+                          <div class="row justify-content-center">
+                            <button (click)="calculateGPA()" class="btn btn-background1 text-white btn-block textFont" style="width:35%;font-size: 20px;"> Calculate GPA </button>
+                          </div>
+                      </div>
+            </div> 
+            <!-- end of left side  -->
+            <!-- <div class="parent"> -->
+            <div class="col-5  m-0">  <!-- parent  -->
+                <div class="py-5 m-5 shadow" id="gpa" style="border:1px solid #FFB88E;background: #FFB88E; width:80%;"> <!-- parent  -->
+                    <div class="row justify-content-center py-2">
+                        <h1 class="textFont py-2 px-4">  My GPA </h1>
+                    </div>
+                    <div class="row justify-content-center py-2">
+                            <div class="switch-field">
+                                <div class="switch-title" style="text-align: center;">GPA Format</div>
+                                <input [(ngModel)]="weightType" (ngModelChange)="changeWeighting(weightType)" type="radio" id="switch2_left" name="switch_2" value="weighted" checked/>
+                                <label for="switch2_left">Weighted</label>
+                                <input [(ngModel)]="weightType" (ngModelChange)="changeWeighting(weightType)" type="radio" id="switch2_right" name="switch_2" value="unweighted" />
+                                <label for="switch2_right">Unweighted</label>
+                            </div>
+                    </div>
+                    <div class="row justify-content-center py-2">
+                        <h1 class="textFont" ng-bind="gpa"> {{gpa}} </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <!-- end of right side  -->
+    
+        </div> 
+        <!-- end of row -->
+      
+    </div>
+
+<!-- 
+# fix default text for letters  -->
+<!-- adding classes the page needs to increase  -->
+<!-- validation when typing 
+not all fields are inputed when you calculate gpa -->

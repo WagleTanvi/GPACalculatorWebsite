@@ -1,0 +1,182 @@
+.titleFont{
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 70px;
+    color: #000;
+}
+.large{
+    font-size: 50px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+.col-container {
+    display: flex;
+    width: 100%;
+}
+.col {
+    flex: 1;
+    padding: 16px;
+}
+
+.btn-background{
+  background-color: orange;
+}
+.btn-background1{
+  background-color: #f26627;
+}
+.body-font{
+  /* font-family: 'Oxygen', sans-serif; */
+  font-family: 'Bitter', serif;
+}
+#main{
+  /* background-color:#CF6766; */
+  /* background-color: #FFB88E;  */
+  width:80%;
+  margin:0 auto;
+  margin-top: 60px;
+}
+.font-big{
+  font-family: 'Catamaran', sans-serif;
+}
+/* toggle switch styles  */
+
+.switch-field {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.switch-title {
+  margin-bottom: 6px;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+  float: left;
+}
+
+.switch-field label {
+  display: inline-block;
+  width: 90px;
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #A5DC86;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+  padding: 4px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+  padding: 4px;
+}
+
+/* switch 2 styles */
+
+ .switch-field2 {
+  font-family: 'Gloria Hallelujah', cursive;
+} 
+
+.switch-title2 {
+  margin-bottom: 6px;
+}
+
+.switch-field2 input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field2 label {
+  float: left;
+}
+
+.switch-field2 label {
+  display: inline-block;
+  width: 90px;
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+
+.switch-field2 label:hover {
+    cursor: pointer;
+}
+
+.switch-field2 input:checked + label {
+  background-color: #A5DC86;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.switch-field2 label:first-of-type {
+  border-radius: 4px 0 0 4px;
+  padding: 4px;
+}
+
+.switch-field2 label:last-of-type {
+  border-radius: 0 4px 4px 0;
+  padding: 4px;
+}
+
+#everything{
+    /* background-color: #DBE9E4; */
+    /* background-color: #FFB88E; */
+    /* background: linear-gradient(#FCBB6D,#D8737F,#685D79,#475C7A); */
+     background: linear-gradient(#dda4b6,#f2cc8c,#f1e6c1,#3f6a8a,#4d5e72); 
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+}
